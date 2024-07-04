@@ -13,7 +13,8 @@
         "pre-commit": "lint-staged && npm run test:staged",
         "prettier": "prettier '**/*.{ts,tsx}' --write",
         "test": "vitest",
-        "test:staged": "vitest --run"
+        "test:staged": "vitest --run",
+        "test:coverage": "vitest run --coverage"
     },
     "dependencies": {
         "axios": "^1.6.8",
@@ -29,12 +30,14 @@
         "@typescript-eslint/eslint-plugin": "^7.2.0",
         "@typescript-eslint/parser": "^7.2.0",
         "@vitejs/plugin-react": "^4.2.1",
+        "@vitest/coverage-v8": "^1.6.0",
         "eslint": "^8.57.0",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.6",
         "husky": "^9.0.11",
         "jsdom": "^24.1.0",
         "lint-staged": "^15.2.7",
+        "msw": "^2.3.1",
         "prettier": "^3.2.5",
         "typescript": "^5.4.5",
         "vite": "^5.2.0",

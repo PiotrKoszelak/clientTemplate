@@ -18,7 +18,8 @@ function App() {
 
             setBotReply(response.data.reply);
         } catch (error) {
-            console.error(error);
+            console.log(error);
+            setBotReply('Oops, failed to fetch!');
         }
     };
 
@@ -30,10 +31,11 @@ function App() {
                     type="text"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
+                    data-testid="input"
                 />
                 <button onClick={handleChat}>Send</button>
             </div>
-            <p>{botReply}</p>
+            {botReply && <p role="answer">{botReply}</p>}
         </div>
     );
 }
